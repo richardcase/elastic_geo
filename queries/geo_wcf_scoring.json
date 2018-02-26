@@ -1,0 +1,33 @@
+{
+    "query": {
+        "bool": {
+            "must": {
+                "match_all": {}
+            },
+            "filter": {
+                "geo_distance": {
+                    "distance": "10km",
+                    "location": {
+                        "lat": 51.525210,
+                        "lon": -0.088141
+                    }
+                }
+            }
+        },
+        "function_score": {
+            "functions": [
+                {
+                    "gauss": {
+                        "location": {
+                            "origin": {
+                                "lat": 51.525210,
+                                "lon": -0.088141
+                            },
+                            "scale": "10km"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

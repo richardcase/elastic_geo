@@ -1,0 +1,19 @@
+{
+  "name": "elastic_geo",
+  "version": "1.0.0",
+  "description": "docker run -p 9200:9200 -p 9300:9300 -e \"discovery.type=single-node\" docker.elastic.co/elasticsearch/elasticsearch:6.2.2 docker run -e ELASTIC_PASSWORD=Password123 docker.elastic.co/elasticsearch/elasticsearch-oss:6.2.2",
+  "main": "convert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "load": "node load.js",
+    "setup": "./setup.sh",
+    "clear": "./clear.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "stream-json": "^0.5.2"
+  }
+}
